@@ -16,6 +16,9 @@ const init = async () => {
   tray = new Tray(resolve(__dirname , '../icon/jietu.png'));
   tray.setContextMenu(require('./menu.js').default);
 
+  //hide dock
+  app.dock.hide();
+
 };
 
 app.on('ready', init);
